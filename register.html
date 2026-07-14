@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Route Slip Registry — Register</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <div class="auth-shell">
+    <div class="auth-card">
+      <div class="auth-eyebrow">Route Slip Registry</div>
+      <h1>Create your account</h1>
+      <p class="auth-sub">Pick the office you sign for. Your office's access code is issued by your administrator.</p>
+
+      <div class="error-msg" id="errorMsg"></div>
+
+      <form id="registerForm">
+        <div class="field">
+          <label for="name">Full name</label>
+          <input type="text" id="name" required autocomplete="name">
+        </div>
+        <div class="field">
+          <label for="role">Office / role</label>
+          <select id="role" required>
+            <option value="" disabled selected>Select your office</option>
+            <option>Evaluator</option>
+            <option>Focal</option>
+            <option>Program in Charge</option>
+            <option>Budget Division</option>
+            <option>Accounting Division</option>
+            <option>Cash Division</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="accessCode">Access code</label>
+          <input type="text" id="accessCode" required autocomplete="off">
+          <div class="hint">Ask your administrator for your office's code.</div>
+        </div>
+        <div class="field">
+          <label for="email">Email</label>
+          <input type="email" id="email" required autocomplete="username">
+        </div>
+        <div class="field">
+          <label for="password">Password</label>
+          <input type="password" id="password" required minlength="6" autocomplete="new-password">
+          <div class="hint">At least 6 characters.</div>
+        </div>
+        <button type="submit" class="btn full" id="registerBtn">Create account</button>
+      </form>
+
+      <div class="auth-foot">Already registered? <a href="index.html">Sign in</a></div>
+    </div>
+  </div>
+
+  <script type="module" src="js/register.js"></script>
+</body>
+</html>

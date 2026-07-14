@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Route Slip Registry — Dashboard</title>
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header class="masthead">
+    <div class="brand">
+      <span class="brand-mark">Route Slip Registry</span>
+      <span class="brand-tag">Internal Routing System</span>
+    </div>
+    <div class="who" id="whoBox">
+      <span class="role-chip" id="roleChip">—</span>
+      <span class="name" id="nameLabel">Loading…</span>
+      <button class="btn ghost small" id="signOutBtn">Sign out</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="page-head">
+      <div>
+        <h1 id="pageTitle">Route Slips</h1>
+        <div class="sub" id="pageSub">—</div>
+      </div>
+      <button class="btn" id="newSlipBtn" style="display:none;">+ New Route Slip</button>
+    </div>
+
+    <div class="tabs" id="tabs"></div>
+    <div class="slip-list" id="slipList"></div>
+  </main>
+
+  <!-- Slip detail modal -->
+  <div class="modal-backdrop" id="detailBackdrop">
+    <div class="modal">
+      <div class="modal-head">
+        <div>
+          <h2 id="detailPayee">—</h2>
+          <span class="status-pill" id="detailStatus"></span>
+        </div>
+        <button class="modal-close" id="detailClose">&times;</button>
+      </div>
+      <div class="modal-body" id="detailBody"></div>
+    </div>
+  </div>
+
+  <!-- New slip modal -->
+  <div class="modal-backdrop" id="newBackdrop">
+    <div class="modal">
+      <div class="modal-head">
+        <h2>New Route Slip</h2>
+        <button class="modal-close" id="newClose">&times;</button>
+      </div>
+      <div class="modal-body">
+        <form id="newSlipForm">
+          <div class="form-grid">
+            <div class="field"><label>Payee</label><input type="text" id="f_payee" required></div>
+            <div class="field"><label>Amount (₱)</label><input type="number" step="0.01" id="f_amount" required></div>
+            <div class="field"><label>BUS No.</label><input type="text" id="f_bus"></div>
+            <div class="field"><label>Voucher No.</label><input type="text" id="f_voucher"></div>
+            <div class="field"><label>Cheque No.</label><input type="text" id="f_cheque"></div>
+            <div class="field"><label>Cheque Date</label><input type="date" id="f_chequeDate"></div>
+          </div>
+          <div class="field"><label>Particulars</label><textarea id="f_particulars" required></textarea></div>
+          <button type="submit" class="btn full" id="createBtn">Create route slip</button>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <script type="module" src="js/dashboard.js"></script>
+</body>
+</html>
