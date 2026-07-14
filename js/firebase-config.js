@@ -11,12 +11,13 @@ import {
 } from "https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore.js";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT.firebaseapp.com",
-  projectId: "YOUR_PROJECT",
-  storageBucket: "YOUR_PROJECT.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+ apiKey: "AIzaSyCnpndyyM5ZDzQ5ySo4xUhGcFgYCDFcTgk",
+  authDomain: "routeslip-5d075.firebaseapp.com",
+  projectId: "routeslip-5d075",
+  storageBucket: "routeslip-5d075.firebasestorage.app",
+  messagingSenderId: "688359113227",
+  appId: "1:688359113227:web:e84ca5908696b3783c3d0e",
+  measurementId: "G-0EYWN40DYB"
 };
 
 const app = initializeApp(firebaseConfig);
